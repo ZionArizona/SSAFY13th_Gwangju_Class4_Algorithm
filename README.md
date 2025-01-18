@@ -6,8 +6,6 @@
 
 ## 참여자
 
-각 참여자들의 solved.ac 티어를 확인하세요.
-
 | 배준영 | [참여자 이름] |
 |--------|---------------|
 | [![배준영 Solved.ac 프로필](http://mazassumnida.wtf/api/v2/generate_badge?boj=bjy5420)](https://solved.ac/bjy5420) | ![참여자 티어](티어 이미지 URL) |
