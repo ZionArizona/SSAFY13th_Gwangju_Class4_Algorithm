@@ -5,7 +5,8 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.TreeMap;
 
-
+// 병합정렬을 사용했지만 O(NlogN) 시간 복잡도로는 풀 수 없음 (시간초과)
+// 계수정렬은 O(N) 시간복잡도를 가진다는 것을 공부하여 이를 사용하여 해결함  
 class Main {
 	
 	static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
