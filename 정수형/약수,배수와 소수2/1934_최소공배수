@@ -1,0 +1,40 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
+
+public class Main {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int t = Integer.parseInt(br.readLine());
+
+        for (int i = 0; i < t; i++) {
+            StringTokenizer st = new StringTokenizer(br.readLine());
+            int n = Integer.parseInt(st.nextToken());
+            int m = Integer.parseInt(st.nextToken());
+            int result = lcm(n, m);
+            System.out.println(result);
+        }
+
+    }
+
+    private static int gcd(int n, int m) {
+        int temp = 0;
+        if (n < m) {
+            temp = n;
+            n = m;
+            m = temp;
+        }
+        int num = 0;
+        while (m != 0) {
+            num = n % m;
+            n = m;
+            m = num;
+        }
+        return n;
+    }
+
+    private static int lcm (int n, int m) {
+        return (n * m) / gcd(n, m);
+    }
+}
