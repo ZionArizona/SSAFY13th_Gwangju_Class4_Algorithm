@@ -1,0 +1,35 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
+
+public class Main {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer st = new StringTokenizer(br.readLine());
+        long n = Long.parseLong(st.nextToken());
+        long m = Long.parseLong(st.nextToken());
+
+        long result = lcm(n, m);
+        System.out.println(result);
+    }
+    private static long gcd(long n, long m) {
+        long temp = 0;
+        if (n < m) {
+            temp = n;
+            n = m;
+            m = temp;
+        }
+        long num = 0;
+        while (m != 0) {
+            num = n % m;
+            n = m;
+            m = num;
+        }
+        return n;
+    }
+
+    private static long lcm (long n, long m) {
+        return (n * m) / gcd(n, m);
+    }
+}
