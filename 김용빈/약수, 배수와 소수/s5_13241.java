@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class b1_13241 {
+public class s5_13241 {
 	public static Long gcd(Long A, Long B) {
 		Long R = (long) 0;
 
